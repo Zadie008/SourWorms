@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterFile.Master.cs" Inherits="EmployeeManagement.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+       
+    <title>
+        <asp:ContentPlaceHolder ID="tab" runat="server"></asp:ContentPlaceHolder>
+    </title>
+        
+    <link href="Styles/StyleSheet.css" rel="stylesheet"> <%--links to the styles --%>
+    <script src="Scripts/JavaScript.js" defer></script>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="page" class="page-wrapper">
+        <header>
+             <asp:ContentPlaceHolder ID="headerContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+        </header>
+
+            <div class="main-content" id="mainContentDiv">
+            <nav>
+                <asp:ContentPlaceHolder ID="navContent" runat="server"></asp:ContentPlaceHolder>
+            </nav>
+            <asp:ContentPlaceHolder ID="mainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
